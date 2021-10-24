@@ -28,7 +28,6 @@ function initialize() {
   var lastSearch = '';
   var categoryGroup = [];
   var finalGroup = [];
-  var formElement = document.querySelector("form");
   finalGroup = products;
 
   updateDisplay();
@@ -36,10 +35,10 @@ function initialize() {
   //au click du bonton afficher 
   console.log(products);
   searchBtn.onclick = selectCategory; 
-  //ont met dans categoryGroup les element dans les condition des filtre
+  //on met dans categoryGroup les element dans les condition des filtre
   function selectCategory(e) {
   e.preventDefault();
-  var myData = new FormData(formElement);
+  var myData = new FormData();
   myData.append('category', category.value);
   
   for (var x of myData) console.log(x); 
