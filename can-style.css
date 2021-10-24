@@ -2,12 +2,45 @@
 
 html {
   font-family: 'Raleway', sans-serif;
-  background-color: yellow;
   font-size: 10px;
-}
+
+
+    height: 100%;
+    background-color: hsla(200,40%,30%,.4);
+    background-image:		 
+      url('https://www.freepnglogos.com/uploads/corn-png/corn-the-best-mexican-fresh-produce-for-global-exports-5.png'),
+      url('https://www.freepnglogos.com/uploads/food-png/high-resolution-food-clipart-collection-19.png'),
+      url('https://www.freepnglogos.com/uploads/fruits-png/fruits-vegetables-artichoke-vector-graphic-pixabay-35.png'),
+      url('https://www.freepnglogos.com/uploads/food-png/food-png-transparent-images-png-only-28.png');
+    background-repeat: repeat-x;
+    background-position: 
+      0 20%,
+      0 100%,
+      0 50%,
+      0 100%,
+      0 0;
+    background-size: 
+      2500px,
+      800px,
+      500px 200px,
+      1000px,
+      400px 260px;
+    animation: 50s para infinite linear;
+    }
+  
+    @keyframes para {
+    100% {
+      background-position: 
+        -5000px 20%,
+        -800px 95%,
+        500px 50%,
+        1000px 100%,
+        400px 0;
+      }
+    }
+
 
 body {
-  width: 800px;
   margin: 0 auto;
 }
 
@@ -20,16 +53,22 @@ h1, h2 {
 }
 
 h1 {
+  font-size: 50px;
+  background: url(icons/boite-de-conserve.png) no-repeat 20%, url(icons/boite-de-conserve.png) no-repeat 80%;
+  width: 100%;
+  background-size: 75px, 75px; 
+  color: green;
+  text-shadow: 2px 2px 1px black;
   font-size: 5rem;
-  background: url(icons/bean_can.png) no-repeat 20% center, url(icons/bean_can.png) no-repeat 80% center;
-  background-size: 48px 48px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 h2 {
   font-size: 2rem;
   color: yellow;
   text-align: right;
-  width: 160px;
+  width: 175px;
   position: absolute;
   right: 4%;
   z-index: 3000;
@@ -38,7 +77,12 @@ h2 {
   padding-top: 0.3rem;
 }
 
-
+span
+{
+  color: white;
+  padding: 4px;
+  border-radius: 25px;
+}
 
 p, label, input, select, button, li {
   font-size: 1.5rem;
@@ -55,17 +99,19 @@ header, aside, main, footer {
 }
 
 header {
-  border: 5px solid black;
-  border-bottom: 0;
+  display: flex;
+  border: 0;
 }
 
 aside {
-  border-right: 5px solid black;
+  border-bottom: 1px solid rgb(14, 206, 24);
+  background-color: rgba(255, 255, 128, .5);
 }
 
 body > div {
-  border: 5px solid black;
+  border: 1px solid rgb(14, 206, 24);
   display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -82,7 +128,11 @@ main {
 }
 
 /* Form styling */
-
+a
+{
+  text-decoration:none;
+  color: inherit;
+}
 aside {
   display: flex;
   flex-flow: column;
@@ -106,18 +156,18 @@ select, input, button {
 }
 
 input {
-  background: black;
+  background-color: #1d680eac;
   box-shadow: inset 1px 1px 1px white;
   color: yellow;
   border: none;
   padding: 5px;
-  width: 201.5px;
 }
 
 button {
-  background: black;
+  background-color: #1d680eac;
   color: yellow;
-  padding: 5px 0;
+  padding: 10px 2px;
+  width: 80px;
   border: none;
   border-radius: 10px;
   box-shadow: inset 1px 1px 2px white, inset -1px -1px 2px #ccc;
@@ -130,25 +180,30 @@ main {
   flex-flow: row wrap;
   justify-content: space-around;
 }
-
+select
+{
+  background-color: #1d680eac;
+  color: yellow;
+}
 section {
-  width: 45%;
+  width: 222px;
   margin: 5px;
   background-color: black;
   position: relative;
-  height: 215px;
+  height: 240px;
+  margin-bottom: 25px;
 }
 
 section img {
   width: 100%;
   display: block;
   position: absolute;
-  bottom: 0px;
+  bottom: 25px;
 }
 
 section p {
   color: yellow;
-  background: black;
+  background: rgb(4, 63, 4);
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -157,21 +212,63 @@ section p {
   box-shadow: 2px 2px 1px yellow;
   position: absolute;
   right: 10px;
-  bottom: -6px;
+  bottom: 19px;
   z-index: 2000;
 }
 
-.vegetables {
-  background: black url(icons/vegetable.png) no-repeat 2px 2px;
+section h3
+{
+  position: absolute;
+  bottom: 0px;
+  color: yellow;
+  margin: 0px;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 15px;
+  text-align: center;
+}
+
+.legumes {
+  background: rgb(25, 80, 4) url(icons/vegetable.png) no-repeat 2px 2px;
   background-size: 24px 24px;
 }
 
-.meat {
-  background: black url(icons/meat.png) no-repeat 2px 2px;
+.viande {
+  background: rgb(82, 143, 82) url(icons/meat.png) no-repeat 2px 2px;
   background-size: 24px 24px;
 }
 
-.soup {
-  background: black url(icons/soup.png) no-repeat 2px 2px;
+.soupe {
+  background: rgb(26, 126, 48) url(icons/soup.png) no-repeat 2px 2px;
   background-size: 24px 24px;
 }
+
+
+form {
+  display: flex;
+  justify-content: center;
+  }
+
+
+form div {
+max-width: 100px;
+height: 40px ;
+float: left;
+padding: 10px;
+}
+
+@media (max-width: 640px) {
+  /* CSS mobile ici */
+  h1{
+    background: none;
+    padding: 0;
+  }
+  form {
+    flex-direction: column ;
+    }
+    form div {
+      max-width: 100%;
+      height: 40px ;
+      padding: 0;
+      }
+  }
