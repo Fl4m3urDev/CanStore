@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html>
-
 <head>
   <meta charset="utf-8">
   <title>The Can Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Cherry+Swash|Raleway" rel="stylesheet">
   <link href="can-style.css" rel="stylesheet">
   <!--[if lt IE 9]>
@@ -13,38 +12,47 @@
 
 <body>
   <header>
-    <h1>The Can Store</h1>
+    <h1><a href="index.html">Au jardin en boite</a></h1>
   </header>
   <div>
     <aside>
       <form>
         <div>
-          <label for="category">Choose a category:</label>
+          <label for="category">Catégorie :</label>
           <select id="category">
-            <option selected>All</option>
-            <option>Vegetables</option>
-            <option>Meat</option>
-            <option>Soup</option>
+            <option selected="">Tous</option>
+            <option>Legumes</option>
+            <option>Viande</option>
+            <option>Soupe</option>
           </select>
         </div>
         <div>
-          <label for="searchTerm">Enter search term:</label>
-          <input type="text" id="searchTerm" placeholder="e.g. beans">
+          <label for="nutriscore">Nutriscore :</label>
+          <select id="nutriscore">
+            <option selected="">Tous</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
+            <option>E</option>
+          </select>
         </div>
         <div>
-          <button>Filter results</button>
+          <label for="searchTerm">Recherche :</label>
+          <input type="text" id="searchTerm" placeholder="ex : Petits pois">
+        </div>
+        <div>
+          <button>GO !</button>
         </div>
       </form>
     </aside>
-    <main>
-
-    </main>
+    <main><section class="viande"><h2>Hot-dogs</h2><p>1.99€</p><img src="images/hotdogs.jpg" alt="hot-dogs"><h3>Nutriscore : <span style="background-color: rgb(192, 57, 43);">E</span></h3></section><section class="legumes"><h2>Petits pois</h2><p>0.52€</p><img src="images/gardenpeas.jpg" alt="petits pois"><h3>Nutriscore : <span style="background-color: rgb(25, 111, 61);">A</span></h3></section><section class="viande"><h2>Bœuf salé</h2><p>2.39€</p><img src="images/cornedbeef.jpg" alt="bœuf salé"><h3>Nutriscore : <span style="background-color: rgb(192, 57, 43);">E</span></h3></section><section class="legumes"><h2>Tomates hachées</h2><p>0.45€</p><img src="images/tomato.jpg" alt="tomates hachées"><h3>Nutriscore : <span style="background-color: rgb(25, 111, 61);">A</span></h3></section><section class="legumes"><h2>Haricots rouges</h2><p>0.58€</p><img src="images/kidney.jpg" alt="haricots rouges"><h3>Nutriscore : <span style="background-color: rgb(241, 196, 15);">C</span></h3></section><section class="viande"><h2>Spam</h2><p>2.85€</p><img src="images/spam.jpg" alt="Spam"><h3>Nutriscore : <span style="background-color: rgb(192, 57, 43);">E</span></h3></section><section class="legumes"><h2>Fèves au lard</h2><p>0.40€</p><img src="images/beans.jpg" alt="fèves au lard"><h3>Nutriscore : <span style="background-color: rgb(82, 190, 128);">B</span></h3></section><section class="soupe"><h2>Soupe de nouilles au poulet</h2><p>1.89€</p><img src="images/chickennoodle.jpg" alt="Soupe de nouilles au poulet"><h3>Nutriscore : <span style="background-color: rgb(220, 118, 51);">D</span></h3></section><section class="soupe"><h2>Soupe de carottes et coriandre</h2><p>1.49€</p><img src="images/carrotcoriander.jpg" alt="Soupe de carottes et coriandre"><h3>Nutriscore : <span style="background-color: rgb(220, 118, 51);">D</span></h3></section><section class="legumes"><h2>Purée de pois</h2><p>0.58€</p><img src="images/mushypeas.jpg" alt="purée de pois"><h3>Nutriscore : <span style="background-color: rgb(82, 190, 128);">B</span></h3></section><section class="soupe"><h2>Soupe à la tomate</h2><p>1.40€</p><img src="images/tomatosoup.jpg" alt="Soupe à la tomate"><h3>Nutriscore : <span style="background-color: rgb(241, 196, 15);">C</span></h3></section><section class="legumes"><h2>Haricots frits</h2><p>0.99€</p><img src="images/refried.jpg" alt="haricots frits"><h3>Nutriscore : <span style="background-color: rgb(192, 57, 43);">E</span></h3></section></main>
   </div>
   <footer>
     <p>TP BOUTIQUE (AJAX – JSON) passage à PHP</a><br>
 
       A partir des fichiers fournis, vous êtes chargé de :<br>
-    <ol>
+    </p><ol>
       <li>Créer un fichier produits.php qui renvoie les données JSON</li>
       <li>Dans le JS intégrer un nouveau fetch qui charge ce fichier à chaque recherche</li>
       <li>Créer et peupler la base BD correspondant au Json</li>
@@ -53,9 +61,11 @@
       <li>Dans le JS modifier le nouveau fetch pour qu’il envoie les choix du formulaire client au fichier produits.php</li>
       <li>Modifier produits.php pour qu’il ne renvoie que les données qui correspondent aux choix du client.</li>
     </ol>
-    </p>
+    <p></p>
   </footer>
   <script src="can-script.js"></script>
+
+
 </body>
 
 </html>
