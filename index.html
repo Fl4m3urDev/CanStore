@@ -16,7 +16,7 @@
   </header>
   <div>
     <aside>
-      <form>
+      <form name="saisie" id="saisie">
         <div>
           <label for="category">Catégorie :</label>
           <select id="category">
@@ -53,8 +53,7 @@
 
       A partir des fichiers fournis, vous êtes chargé de :<br>
     </p><ol>
-      <li>Franciser les commentaires du code JS pour une meilleure compréhension et la page html pour le public
-        français. La boutique s’appellera : "Au jardin en boite".</li>
+      <li>Ecrire la page produits.php qui genérera le fichier JSON avec un simple echo des données de produits.json</li>
       <li> La méthode d’accès aux images est : function fetchBlob(product). Supprimer cette fonction en utilisant
         simplement l’url de l’image transmise par le JSON pour paramétrer l’attribut « src » des images dans la function
         showProduct(objectURL, product) qui ne prendra donc plus qu’un argument « product ».</li>

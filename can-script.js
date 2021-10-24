@@ -3,7 +3,7 @@ var products;
 
 // ajout du fichier json dans la var product 
 // fetch pour eviter les erreur
-fetch('produits.json').then(function (response) {
+fetch('produits.php').then(function (response) {
   if (response.ok) {
     response.json().then(function (json) {
       products = json;
@@ -28,15 +28,31 @@ function initialize() {
   var lastSearch = '';
   var categoryGroup = [];
   var finalGroup = [];
+  var formElement = document.querySelector("form");
   finalGroup = products;
 
   updateDisplay();
 
   //au click du bonton afficher 
+  console.log(products);
   searchBtn.onclick = selectCategory; 
   //ont met dans categoryGroup les element dans les condition des filtre
   function selectCategory(e) {
-    e.preventDefault();
+  e.preventDefault();
+  var myData = new FormData(formElement);
+  myData.append('category', category.value);
+  
+  for (var x of myData) console.log(x); 
+   fetch('produits_tri.php', { method: "POST", body: myData }).then(function (response) {
+    if (response.ok) {
+      response.json().then(function (json) {
+        finalGroup = json;
+      });
+    } else {
+      console.log('Network request for products.json failed with response ' + response.status + ': ' + response.statusText);
+    }
+  });
+  
     categoryGroup = [];
     finalGroup = [];
 
@@ -113,8 +129,8 @@ function initialize() {
 
     heading.textContent = product.nom.replace(product.nom.charAt(0), product.nom.charAt(0).toUpperCase());
 
-    para.textContent = product.prix.toFixed(2) + ' €';
-
+    //para.textContent = product.prix.toFixed(2) + ' €';
+    para.textContent = product.prix + ' €';
     image.src = url;
     image.alt = product.nom;
 
