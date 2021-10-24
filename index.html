@@ -41,19 +41,17 @@
     </main>
   </div>
   <footer>
-    <p><a href="http://localhost/Ajax/Exemple04/index.html">TP BOUTIQUE (AJAX – JSON)</a>
+    <p>TP BOUTIQUE (AJAX – JSON) passage à PHP</a><br>
 
       A partir des fichiers fournis, vous êtes chargé de :<br>
     <ol>
-      <li>Franciser les commentaires du code JS pour une meilleure compréhension et la page html pour le public
-        français. La boutique s’appellera : "Au jardin en boite".</li>
-      <li> La méthode d’accès aux images est : function fetchBlob(product). Supprimer cette fonction en utilisant
-        simplement l’url de l’image transmise par le JSON pour paramétrer l’attribut « src » des images dans la function
-        showProduct(objectURL, product) qui ne prendra donc plus qu’un argument « product ».</li>
-      <li> Adapter le script pour faire fonctionner la page de présentation des produits avec le fichier JSON joint : «
-        produits.json ». La loi oblige le vendeur à afficher le « nutri-score » du produit. Mettre en œuvre cet ajout.
-      </li>
-      <li>Le client souhaite un nouveau look plus moderne, nature et une page responsive…</li>
+      <li>Créer un fichier produits.php qui renvoie les données JSON</li>
+      <li>Dans le JS intégrer un nouveau fetch qui charge ce fichier à chaque recherche</li>
+      <li>Créer et peupler la base BD correspondant au Json</li>
+      <li>Modifier produits.php pour requêter les données sur la BD et les renvoyer en Json</li>
+      <li>Créer et peupler la base BD correspondant au Json</li>
+      <li>Dans le JS modifier le nouveau fetch pour qu’il envoie les choix du formulaire client au fichier produits.php</li>
+      <li>Modifier produits.php pour qu’il ne renvoie que les données qui correspondent aux choix du client.</li>
     </ol>
     </p>
   </footer>
